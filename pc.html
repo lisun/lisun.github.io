@@ -11,24 +11,6 @@
 
 <body>
 <script>
-document.addEventListener('DOMContentLoaded',function(){
-	setTimeout(function(){
-		var ua = navigator.userAgent.toLowerCase();
-		var apple = ua.search(/ipad|iphone|iPod/)>=0
-		var android = ua.search(/android|adr/)>=0
-		var inWeiXin = ua.search(/micromessenger/)>=0
-		if(inWeiXin){
-			location.href='wx.html'
-		}else if(apple){
-		    location.href='http://itunes.apple.com/cn/app/id552858812?mt=8'
-		}else if (android){
-			location.href='dl.html'
-		}else {
-			location.href='pc.html'
-		}
-	},0)
-},false);
-
 </script>
 <section id='pc'>
   <div class="dlcs_top"> <img src="https://ios.zhongsou.com/sc/img/yunmall_header.jpg" /> <span class="logo"></span>
