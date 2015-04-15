@@ -5,38 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <title>中搜悦商城</title>
-<link href="https://ios.zhongsou.com/sc/css/global.css" rel="stylesheet" type="text/css" >
-<link href="https://ios.zhongsou.com/sc/css/dlcs.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-<section>
-  <div class="dlcs_top"> <img src="https://ios.zhongsou.com/sc/img/yunmall_header.jpg" /> <span class="logo"></span>
-    <div class="dlcs_android"> <a href="http://dl.mall.zhongsou.com/yunmall/yunmall_v1.0_20150206.apk" title="点击直接下载安装">
-      <div class="dlcs_androidr"> 悦商城Android版&nbsp;1.0&nbsp;下载安装</div>
-      </a> </div>
-    <span class="android"></span>
-    <div class="dlcs_ios"> 
-    <p>安装说明：仅支持iOS设备通过safari浏览器访问</p>
-    <a href="itms-services://?action=download-manifest&url=https://lisun.github.io/yunmall.plist" title="点击直接下载安装">
-      <div class="dlcs_iosr"> 悦商城iOS预览版&nbsp;1.0.1&nbsp;下载安装</div>
-      </a>
-      <h1>悦商城iOS预览版说明：</h1> 
-      <ol class="sy_explain">
-				<li>支持商城、店铺的基本商品发布功能；</li>
-				<li>支持商品交换中心非定向信息流转；</li>
-				<li>支持商城多条件自定义分类货架名称；</li>
-				<li>支持在线购物功能；</li>
-				<li>支持中搜币支付；</li>
-				<li>具备商品多条件配送功能；</li>
-				<li>支持商品信息高度自定义；</li>
-				<li>支持广告位多条件链接推荐内容；</li>
-				<li>支持app首页内容（橱窗、广告位等）形式、尺寸的高度自定义；</li>
-				<li>全面接入搜悦账户并同步包括中搜币余额在内的用户信息；</li>
-				<li>iOS、Android全网客户端支持。</li>
-				      </ol>
-    </div>
-  </div>
-</section>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	setTimeout(function(){
+		var ua = navigator.userAgent.toLowerCase();
+		var apple = ua.search(/ipad|iphone|iPod/)>=0
+		var android = ua.search(/android|adr/)>=0
+		var inWeiXin = ua.search(/micromessenger/)>=0
+		if(inWeiXin){
+			location.href='wx.html'
+		}else if(apple){
+		    location.href='http://itunes.apple.com/cn/app/id552858812?mt=8'
+		}else if (android){
+			location.href='dl.html'
+		}else {
+			location.href='pc.html'
+		}
+	},0)
+},false);
+
+</script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+@charset "utf-8";
+/*
+Title:	 Reset styles for 企业账号分享落地页
+Create:	 2013-11-25
+Author:  yinyue01@zhongsou.com
+Tel   :  
+Version: 
+*/
+/*********** 首页 **************/
+body{ margin:0; padding:0;background: none repeat scroll 0 0 #fff;}
+.souyue-weixin-head{   border-bottom: 1px solid #d9d9d9; padding: 10px 12px 3px;}
+.souyue-weixin-head a{ height:30px; display:block;}
+.souyue-weixin-head-logo{ float:left;}
+.souyue-weixin-head-logo img{ height: 30px;}
+.souyue-weixin-head-open{  width:62px; height:24px; display:block; float:right; color:#fff; font-size:14px; line-height:24px; text-align:center; background-color:#67abdf;   border-radius:3px;}
+
+/*********** ios提示页 **************/
+.souyue-weixin-open{ background-color:#f0f0f0;}
+.souyue-weixin-open section{  width:201px; height:225px; position:fixed; left:50%; top:50%; margin:-112px 0 0 -100px;}
+.souyue-weixin-open img{ width:201px; height:225px;}
+
+
+
+
+
+
