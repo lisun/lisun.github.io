@@ -5,27 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <title>中搜悦商城</title>
-</head>
-<body>
+<style>
+.souyue-weixin-open{ background-color:#f0f0f0;}
+.souyue-weixin-open section{}
+.souyue-weixin-open img{ width:100%;height:auto}
+</style>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
 	setTimeout(function(){
+		var content = document.getElementById('content');
 		var ua = navigator.userAgent.toLowerCase();
 		var apple = ua.search(/ipad|iphone|iPod/)>=0
 		var android = ua.search(/android|adr/)>=0
 		var inWeiXin = ua.search(/micromessenger/)>=0
 		if(inWeiXin){
-			location.href='wx.html'
+			content.innerHTML = '<img src="images/android.jpg">'			
 		}else if(apple){
-		    
+		    content.innerHTML = '如果没有响应，请&nbsp;&nbsp;<a href="itms-services://?action=download-manifest&url=https://ios.zhongsou.com/sc/yunmall.plist" style="display:inline;">点击这里</a>&nbsp;&nbsp;下载。'
 		    location.href='apple.html'
 		}else if (android){
-			location.href='android.html'
+			content.innerHTML = '正在开始下载文件，如果没有响应，请&nbsp;&nbsp;<a href="http://dl.mall.zhongsou.com/yunmall/yunmall_v1.2_20150326.apk" style="display:inline;">点击这里</a>&nbsp;&nbsp;直接下载。'
+			location.href='http://dl.mall.zhongsou.com/yunmall/yunmall_v1.2_20150326.apk'
 		}else {
 			location.href='pc.html'
 		}
 	},0)
 },false);
 </script>
+</head>
+<body class="souyue-weixin-open">
+	<section id='content'>	
+	</section>
 </body>
 </html>
