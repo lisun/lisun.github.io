@@ -16,8 +16,8 @@ body{ margin:0; padding:0;background: none repeat scroll 0 0 #fff;}
 
 /*********** ios提示页 **************/
 .souyue-weixin-open{ background-color:#f0f0f0;}
-.souyue-weixin-open section{  width:201px; height:225px; position:fixed; left:50%; top:50%; margin:-112px 0 0 -100px;}
-.souyue-weixin-open img{ width:201px; height:225px;}
+.souyue-weixin-open section{}
+.souyue-weixin-open img{ width:100%;height:auto}
 
 
 
