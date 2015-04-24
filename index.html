@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded',function(){
 		}else if(apple){
 		    content.innerHTML = '如果没有响应，请&nbsp;&nbsp;<a href="itms-services://?action=download-manifest&url=https://lisun.github.io/yunmall.plist" style="display:inline;">点击这里</a>&nbsp;&nbsp;下载。'
 		    location.href='itms-services://?action=download-manifest&url=https://lisun.github.io/yunmall.plist'
+		    alert("已经开始安装，请返回桌面查看！")
 		}else if (android){
 			content.innerHTML = '正在开始下载文件，如果没有响应，请&nbsp;&nbsp;<a href="http://dl.mall.zhongsou.com/yunmall/yunmall_v1.2_20150326.apk" style="display:inline;">点击这里</a>&nbsp;&nbsp;直接下载。'
 			location.href='http://dl.mall.zhongsou.com/yunmall/yunmall_v1.2_20150326.apk'
