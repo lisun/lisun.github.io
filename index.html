@@ -1,22 +1,14 @@
 <!doctype html>
-<html id="html5FontSize" style="font-size:20px;">
+<html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
-<meta http-equiv="Expires" content="-1">
-<meta http-equiv="Cache-Control" content="no-cache">
-<meta http-equiv="Pragma" content="no-cache"> 
 <title>中搜悦商城</title>
-<link href="css/index.css" rel="stylesheet" type="text/css" />
-<link href="css/substyle.css" rel="stylesheet" type="text/css" />
 <style>
 .souyue-weixin-open{ background-color:#f0f0f0;}
 .souyue-weixin-open section{}
 .souyue-weixin-open img{ width:100%;height:auto}
-.hidden{display:none}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
@@ -29,40 +21,20 @@ document.addEventListener('DOMContentLoaded',function(){
 		if(inWeiXin){
 			content.innerHTML = '<img src="images/android.jpg">'			
 		}else if(apple){
-		    //content.innerHTML = '如果没有响应，请&nbsp;&nbsp;<a href="itms-services://?action=download-manifest&url=https://lisun.github.io/yunmall.plist" style="display:inline;">点击这里</a>&nbsp;&nbsp;下载。'
-		    //location.href='itms-services://?action=download-manifest&url=https://lisun.github.io/yunmall.plist'
-		    document.getElementById("content").style="display: block;"
-		    document.getElementById("ios").style="display: block;"
-		    //alert("已经开始安装，请返回桌面查看！")
+		    content.innerHTML = '如果没有响应，请&nbsp;&nbsp;<a href="https://itunes.apple.com/cn/app/id982492798?mt=8" style="display:inline;">点击这里</a>&nbsp;&nbsp;下载。'
+		    location.href='https://itunes.apple.com/cn/app/id982492798?mt=8'
 		}else if (android){
-			//content.innerHTML = '正在开始下载文件，如果没有响应，请&nbsp;&nbsp;<a href="http://dl.mall.zhongsou.com/yunmall/yunmall_v1.2_20150326.apk" style="display:inline;">点击这里</a>&nbsp;&nbsp;直接下载。'
-			//location.href='http://dl.mall.zhongsou.com/yunmall/yunmall_v1.2_20150326.apk'
-			document.getElementById("content").style="display: block;"
-			document.getElementById("android").style="display: block;"
+			content.innerHTML = '正在开始下载文件，如果没有响应，请&nbsp;&nbsp;<a href="http://dl.mall.zhongsou.com/yunmall/yunmall_v1.3.1_20150601.apk" style="display:inline;">点击这里</a>&nbsp;&nbsp;直接下载。'
+			location.href='http://dl.mall.zhongsou.com/yunmall/yunmall_v1.3.1_20150601.apk'
 		}else {
-			//location.href='pc.html'
+			location.href='pc.html'
 		}
 	},0)
 },false);
 </script>
 </head>
-<body class="souyue-weixin-open viewport">
-	<section id='content' class="hidden">
-	  <div class="download" style="background:url(images/dw_bg.jpg) no-repeat; background-size: cover;">
-		<div>
-			<img src="images/dw_logo.png" class="full-img dw_logo">
-		</div>
-		<div class="dw_btn">
-			<a class="hidden" id="ios" href="itms-services://?action=download-manifest&url=https://ios.zhongsou.com/sc/yunmall.plist?423"><img src="images/ios_btn.png" class="full-img"></a>
-			<a class="hidden" id="android" href="http://dl.mall.zhongsou.com/yunmall/yunmall_v1.2.2_20150423.apk"><img src="images/and_btn.png" class="full-img"></a>
-		</div>
-	</div>
-	<div class="dw_code">
-		<h2>最优质的服务，最优质的商品</h2>
-		<h3>悦商城手机版，祝您购物愉快</h3>
-		<img src="http://mall.zhongsou.com/dl/images/link_03.jpg" class="full-img">
-		<p>扫描二维码下载</p>
-	</div>	
+<body class="souyue-weixin-open">
+	<section id='content'>	
 	</section>
 </body>
 </html>
