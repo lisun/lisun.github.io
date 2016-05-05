@@ -1,40 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WKWebView  测试</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-touch-fullscreen" content="YES">
 <meta name="format-detection" content="telephone=no">
-<title>中搜悦商城</title>
-<style>
-.souyue-weixin-open{ background-color:#f0f0f0;}
-.souyue-weixin-open section{}
-.souyue-weixin-open img{ width:100%;height:auto}
-</style>
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-	setTimeout(function(){
-		var content = document.getElementById('content');
-		var ua = navigator.userAgent.toLowerCase();
-		var apple = ua.search(/ipad|iphone|iPod/)>=0
-		var android = ua.search(/android|adr/)>=0
-		var inWeiXin = ua.search(/micromessenger/)>=0
-		if(inWeiXin){
-			content.innerHTML = '<img src="images/android.jpg">'			
-		}else if(apple){
-		    content.innerHTML = '如果没有响应，请&nbsp;&nbsp;<a href="https://itunes.apple.com/cn/app/id982492798?mt=8" style="display:inline;">点击这里</a>&nbsp;&nbsp;下载。'
-		    location.href='https://itunes.apple.com/cn/app/id982492798?mt=8'
-		}else if (android){
-			content.innerHTML = '正在开始下载文件，如果没有响应，请&nbsp;&nbsp;<a href="http://dl.mall.zhongsou.com/yunmall/yunmall_v1.3.1_20150601.apk" style="display:inline;">点击这里</a>&nbsp;&nbsp;直接下载。'
-			location.href='http://dl.mall.zhongsou.com/yunmall/yunmall_v1.3.1_20150601.apk'
-		}else {
-			location.href='pc.html'
-		}
-	},0)
-},false);
-</script>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="pragram" content="no-cache">
+<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
 </head>
-<body class="souyue-weixin-open">
-	<section id='content'>	
-	</section>
+
+<body class="s-bg-ddd pc no-3d" style="-webkit-user-select: none;">
+	<section>
+	<button class="BTN" type="button" onclick="click();">点我</button>
+    </section>
+
 </body>
+<script>
+var message = {
+				'method' : 'hello',
+				'param1' : 'liuyanwei',
+				};
+				
+var click = window.webkit.messageHandlers.webViewApp.postMessage(message);
+</script>
 </html>
